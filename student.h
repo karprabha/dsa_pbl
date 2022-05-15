@@ -14,7 +14,7 @@ public:
 
 struct Student{
 	std::string name;
-	unsigned long roll_number;
+	unsigned long long roll_number;
 	unsigned int total_marks;
 	char semester_result;
 };
@@ -23,7 +23,7 @@ void reset_inputStream(void);
 void sort_record(nstd::LinkedList<Student>& studentRecord);
 void read_from_file(nstd::LinkedList<Student>& studentRecord);
 void write_to_file(nstd::LinkedList<Student>& studentRecord);
-bool student_record_is_present(const nstd::LinkedList<Student>& studentRecord,unsigned long& roll_number,unsigned int& index);
+bool student_record_is_present(const nstd::LinkedList<Student>& studentRecord,unsigned long long& roll_number,unsigned int& index);
 void input_student_details(nstd::LinkedList<Student>& studentRecord);
 void display_details(const Student& student);
 void view_single_student_details(const nstd::LinkedList<Student>& studentRecord);

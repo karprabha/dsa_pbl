@@ -71,7 +71,7 @@ void write_to_file(nstd::LinkedList<Student>& studentRecord){
 
 }
 
-bool student_record_is_present(const nstd::LinkedList<Student>& studentRecord,unsigned long& roll_number,unsigned int& index){
+bool student_record_is_present(const nstd::LinkedList<Student>& studentRecord,unsigned long long& roll_number,unsigned int& index){
 	bool roll_number_present = false;
 	Student student;
 
@@ -129,7 +129,7 @@ void display_details(const Student& student){
 
 void view_single_student_details(const nstd::LinkedList<Student>& studentRecord){
 	unsigned int index =0;
-	unsigned long roll_number=0;
+	unsigned long long roll_number=0;
 	if(student_record_is_present(studentRecord,roll_number,index)){
 		display_details(studentRecord.at(index));
 	}
@@ -145,7 +145,7 @@ void view_all_student_details(const nstd::LinkedList<Student>& studentRecord){
 
 void modify_student_details(nstd::LinkedList<Student>& studentRecord){
 	unsigned int index =0;
-	unsigned long roll_number =0;
+	unsigned long long roll_number =0;
 	if(student_record_is_present(studentRecord,roll_number,index)){
 		Student student;
 		student = studentRecord.at(index);
@@ -175,7 +175,7 @@ void modify_student_details(nstd::LinkedList<Student>& studentRecord){
 
 void delete_record(nstd::LinkedList<Student>& studentRecord){
 	unsigned int index =0;
-	unsigned long roll_number=0;
+	unsigned long long roll_number=0;
 	if(student_record_is_present(studentRecord,roll_number,index)){
 		studentRecord.del(index);
 		std::cout<<"\n Record deleted Successfully "<<std::endl;
